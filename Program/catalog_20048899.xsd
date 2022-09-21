@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<!--
+Name: Isha Shrestha
+University ID: 20048899
+Date: May 4 2022
+-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- Root Element -->
+	<xs:element name="giftstore">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="storedetails" minOccurs="1" maxOccurs="unbounded" />
+				 <xs:element ref="giftcardList" minOccurs="1" maxOccurs="unbounded" />
+				 <xs:element ref="footer" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+<!-- storedetails-->
+	<xs:element name="storedetails">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="storename" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <!-- storename-->
+	<xs:element name="storename">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="logo" />
+				 <xs:element ref="name" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <!-- logo -->
+	<xs:element name="logo">
+		<xs:complexType>
+			 <xs:attribute name="id" type="xs:ID" use="required" />
+        </xs:complexType>
+	</xs:element>
+
+    <!-- name -->
+	<xs:element name="name" type="xs:string" />
+
+
+	<!-- Giftcardlist -->
+	<xs:element name="giftcardList">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="giftcard" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+    <!-- Giftcard -->
+	<xs:element name="giftcard">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="giftCardImage" minOccurs="0" maxOccurs="unbounded" />
+				 <xs:element ref="giftcard_type" minOccurs="0" maxOccurs="unbounded" />
+				 <xs:element ref="price" minOccurs="0" maxOccurs="unbounded" />
+				 <xs:element ref="validity" minOccurs="0" maxOccurs="unbounded" />
+				 <xs:element ref="number_of_users" minOccurs="0" maxOccurs="unbounded" />
+				 <xs:element ref="location" minOccurs="0" maxOccurs="unbounded" />
+				 <xs:element ref="discount_vouchers" minOccurs="0" maxOccurs="unbounded" />
+				 <xs:element ref="valid_countries" minOccurs="0" maxOccurs="1" />
+				 <xs:element ref="gift_message" minOccurs="0" maxOccurs="1" />
+				 <xs:element ref="available_quantity" minOccurs="0" maxOccurs="1" />
+				 <xs:element ref="number_of_cards_used" minOccurs="0" maxOccurs="1" />
+				 <xs:element ref="button" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="giftcard_name" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<!-- giftcardimage -->
+	<xs:element name="giftCardImage">
+		<xs:complexType>
+			 <xs:attribute name="id" type="xs:ID" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<!-- giftcardtype -->
+	<xs:element name="giftcard_type">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				 <xs:enumeration value="Physical" />
+				 <xs:enumeration value="Digital" />
+            </xs:restriction>
+        </xs:simpleType>
+	</xs:element>
+	<!-- price -->
+    <xs:element name="price" type="xs:string" />
+    
+     <!-- validity-->
+    <xs:element name="validity">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="from" minOccurs="1" maxOccurs="unbounded" />
+                 <xs:element ref="to" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="from" type="xs:date" />
+    <xs:element name="to" type="xs:date" />
+    <xs:element name="number_of_users" type="xs:integer"/>
+    <xs:element name="location" type="xs:string" />
+
+    <!-- discount vouchers-->
+    <xs:element name="discount_vouchers">
+         <xs:complexType>
+             <xs:simpleContent>
+                 <xs:extension base="xs:string">
+                 <xs:attribute name="type" type="xs:string" use="required" />
+             </xs:extension>
+         </xs:simpleContent>
+      </xs:complexType>
+ </xs:element>
+
+ <!-- valid countries -->
+ <xs:element name="valid_countries">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="country1" minOccurs="1" maxOccurs="unbounded" />
+				 <xs:element ref="country2" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="country1" type="xs:string" />
+	<xs:element name="country2" type="xs:string" />
+	
+
+
+	<!-- gift message-->
+	<xs:element name="gift_message" type="xs:string" />
+    <!-- available quantity -->
+	<xs:element name="available_quantity" type="xs:integer" />
+    <!-- number of cards used -->
+	<xs:element name="number_of_cards_used" type="xs:integer" />
+
+
+
+    <!-- button -->
+<xs:element name="button">
+      <xs:complexType>
+         <xs:simpleContent>
+             <xs:extension base="xs:string">
+             <xs:attribute name="id" type="xs:ID" use="required" />
+            </xs:extension>
+         </xs:simpleContent>
+      </xs:complexType>
+ </xs:element>
+
+<!-- Footer -->
+ <xs:element name="footer">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="address" minOccurs="1" maxOccurs="unbounded" />
+				 <xs:element ref="contact" minOccurs="1" maxOccurs="unbounded" />
+                 <xs:element ref="ul" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+<!-- Address-->
+    <xs:element name="address">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="city" minOccurs="0" maxOccurs="unbounded" />
+				 <xs:element ref="state" minOccurs="0" maxOccurs="1" />
+                 <xs:element ref="street" minOccurs="0" maxOccurs="1" />
+                 <xs:element ref="post_code" minOccurs="0" maxOccurs="1" />
+                 <xs:element ref="product" minOccurs="0" maxOccurs="1" />
+			</xs:sequence>
+			<xs:attribute name="country" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="city"  type="xs:string" />
+    <xs:element name="state" type="xs:string" />
+    <xs:element name="street" type="xs:string" />
+    <xs:element name="post_code" type="xs:string" />
+    <xs:element name="product" type="xs:string" />
+
+<!-- Contact -->
+    <xs:element name="contact">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="telephone" minOccurs="1" maxOccurs="unbounded" />
+				 <xs:element ref="mobile" minOccurs="1" maxOccurs="unbounded" />
+                 <xs:element ref="website" minOccurs="1" maxOccurs="unbounded" />
+                 <xs:element ref="facebook" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element ref="instagram" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="telephone" type="xs:string" />
+    <xs:element name="mobile" type="xs:string" />
+    <xs:element name="website" type="xs:anyURI" />
+    <xs:element name="facebook" type="xs:anyURI" />
+    <xs:element name="instagram" type="xs:anyURI" />
+
+<!-- ul -->
+    <xs:element name="ul">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element ref="li" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+    <xs:element name="li" type="xs:string" />
+</xs:schema>

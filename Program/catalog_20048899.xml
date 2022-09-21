@@ -1,0 +1,182 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone ="no"?>
+<?xml-stylesheet type="text/css" href="catalog_20048899.css"?>
+<?xml-model href="" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+
+
+  <giftstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="catalog_20048899.xsd" >
+    <storedetails>
+           <storename>  
+                 <logo id="p1"/>
+
+                 <name>Primrose Giftcards </name>
+           </storename>
+           <!-- Primrose cards store is a gift store that sells digital gift cards or gift vouchers.-->
+    </storedetails>
+
+
+     <giftcardList id="gl1"> 
+
+        <giftcard giftcard_name="Engagement Announcement"> 
+             <giftCardImage id="g1"/>
+             <giftcard_type>Physical</giftcard_type>
+             <price> £2 </price>
+             <validity>
+                  <from> 2020-02-01 </from>
+                 <to> 2021-02-01</to>
+             </validity>
+             <number_of_users> 100</number_of_users>
+             <location> London </location> 
+             <discount_vouchers type="percentage"> 5 </discount_vouchers>
+             <button id="b1"> Send </button>
+   </giftcard>
+
+       <giftcard giftcard_name="Happy Mother's Day">
+             <giftCardImage id="g2"/>
+             <giftcard_type>Physical</giftcard_type>
+             <price> £2</price>
+             <validity>
+                 <from> 2020-02-01 </from>
+                 <to> 2021-02-01</to>
+             </validity>
+             <number_of_users> 180</number_of_users>
+             <discount_vouchers type="percentage"> 10 </discount_vouchers>
+             <valid_countries> <!-- Optional Element -->
+                 <country1>US</country1>
+                 <country2>Canada</country2>
+             </valid_countries>
+             <button id="b2"> Send </button>
+        </giftcard>
+   
+        <giftcard giftcard_name="In Love">
+             <giftCardImage id="g3"/>
+             <giftcard_type>Physical</giftcard_type>
+             <price> £4</price>
+             <validity>
+                 <from> 2020-02-01 </from>
+                 <to> 2021-02-01</to>
+             </validity>
+             <number_of_users> 50</number_of_users>
+             <location> ktm</location> 
+             <discount_vouchers type="perchantage"> 15 </discount_vouchers> 
+             <button id="b3"> Send </button>
+        </giftcard>
+    </giftcardList>
+
+    <giftcardList id="gl2"> 
+        <giftcard giftcard_name="Wedding Gift Card">
+             <giftCardImage id="g4"/>
+             <giftcard_type>Digital</giftcard_type>
+             <price> £3</price>
+             <validity>
+                 <from>2020-02-01 </from>
+                 <to> 2021-02-01</to>
+             </validity>
+             <number_of_users> 200</number_of_users>
+             <location> ktm</location> 
+             <discount_vouchers type="amount"> 40 </discount_vouchers>
+             <gift_message> Happy Married Life! </gift_message> <!-- Optional Element -->
+             <button id="b4"> Send </button>
+        </giftcard>
+
+        <giftcard giftcard_name="For Her">
+             <giftCardImage id="g5"/>
+             <giftcard_type>Digital</giftcard_type>
+             <price> £5</price>
+             <validity>
+                 <from>  2020-02-01 </from>
+                 <to> 2021-02-01</to>
+             </validity>
+             <number_of_users> 100</number_of_users>
+             <location> ktm</location> 
+             <discount_vouchers type="amount"> 50 </discount_vouchers>
+             <available_quantity> 120 </available_quantity> <!-- Optional Element -->
+             <button id="b5"> Send </button>
+        </giftcard>
+
+       <giftcard giftcard_name="For Him">
+             <giftCardImage id="g6"/>
+             <giftcard_type>Digital</giftcard_type>
+             <price> £6</price>
+             <validity>
+                 <from> 2020-02-01  </from>
+                 <to> 2021-02-01 </to>
+             </validity>
+             <number_of_users> 90</number_of_users>
+             <location> ktm</location> 
+             <discount_vouchers type="amount"> 20 </discount_vouchers>
+             <number_of_cards_used> 0 </number_of_cards_used> <!-- Optional Element -->
+             <button id="b6"> Send </button>
+       </giftcard>
+    </giftcardList>
+    
+    <giftcardList id="gl3"> 
+        <giftcard giftcard_name="Anniversary Gift Card">
+             <giftCardImage id="g7"/>
+             <giftcard_type>Physical</giftcard_type>
+             <price> £5</price>
+             <validity>
+                 <from> 2020-02-01  </from>
+                 <to> 2021-02-01 </to>
+             </validity>
+             <number_of_users> 140</number_of_users>
+             <location> ktm</location> 
+             <discount_vouchers type="perchantage"> 20 </discount_vouchers>
+             <button id="b7"> Send </button>
+        </giftcard>
+
+       <giftcard giftcard_name="Happy Father's Day">
+             <giftCardImage id="g8"/>
+             <giftcard_type>Physical</giftcard_type>
+             <price> £2</price>
+             <validity>
+                 <from> 2020-02-01  </from>
+                 <to> 2021-02-01 </to>
+             </validity>
+             <number_of_users> 120</number_of_users>
+             <location> ktm</location> 
+             <discount_vouchers type="perchantage"> 30 </discount_vouchers>
+             <button id="b8"> Send </button>
+       </giftcard>
+
+       <giftcard giftcard_name="For Her">
+        <giftCardImage id="g9"/>
+             <giftcard_type>Physical</giftcard_type>
+             <price> £7</price>
+             <validity>
+                 <from> 2020-02-01  </from>
+                 <to> 2021-02-01 </to>
+             </validity>
+             <number_of_users> 160</number_of_users>
+             <location> ktm</location> 
+             <discount_vouchers type="perchantage"> 40 </discount_vouchers>
+             <button id="b9"> Send </button>
+       </giftcard>
+       </giftcardList>
+    
+
+   <footer>
+     <address country="United Kingdom">
+          <city> London </city>
+          <state> England </state>
+          <street> Abbey Road </street>
+          <post_code> NW8 9AY </post_code> 
+          <product> Gift cards </product>
+       </address>
+
+       <contact>
+         <telephone> Telephone:- 311-287 </telephone>
+         <mobile> Mobile:- +44(0)49 7859 8575 </mobile>
+         <website> www.primrosecardsstore.com </website> 
+         <facebook> www.facebook.com/primrosecardsstore </facebook>
+         <instagram> www.instagram.com/primrosecardsstosre </instagram>
+       </contact> 
+
+       <ul>
+          <li>Primrose Cards</li>
+          <li>Primrose Cards</li>
+          <li>Primerose Cards</li>
+       </ul>
+   </footer>
+</giftstore>
